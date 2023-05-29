@@ -11,8 +11,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "build": "npm install"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",

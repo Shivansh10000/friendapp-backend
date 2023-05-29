@@ -2,14 +2,12 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import friendModel from './models/Friends.js'
-require("dotenv").config();
+// require("dotenv").config();
 
 const app = express()
 
 app.use(express.json())
-app.use(cors({
-    origin: ["http://localhost:3001", "https://friendapp.onrender.com"]
-}));
+app.use(cors())
 
 mongoose.connect('mongodb+srv://shivanshj157:friendApp123@friendapp.c9q5ptj.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true})
 
@@ -51,6 +49,6 @@ app.delete('/delete/:id', async (req, res) => {
 
 
 
-app.listen(process.env.PORT || 3001, ()=>{
+app.listen(3001, ()=>{
     console.log("You are connected!");
 })
